@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     
     func readJSON()
     {
-        Alamofire.request(.GET, "https://dl.dropboxusercontent.com/u/39529196/test.json").responseJSON { response in
+        Alamofire.request(.GET, "https://tinyurl.com/jcgxwkk").responseJSON { response in
             if let JSON = response.result.value
             {
                 self.activityIndicator.stopAnimating()
