@@ -51,12 +51,25 @@
                                     <constraint firstAttribute="height" constant="430" id="olc-3x-JhO"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAn-5M-uOJ">
+                                <rect key="frame" x="250" y="440" width="46" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="2Vp-uq-Web"/>
+                                    <constraint firstAttribute="height" constant="32" id="f0L-P3-vrY"/>
+                                </constraints>
+                                <state key="normal" image="info_btn"/>
+                                <connections>
+                                    <action selector="infoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oPb-iC-Nbe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.90588235294117647" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="PUV-gs-4Rj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2ej-zz-0Et"/>
                             <constraint firstItem="PUV-gs-4Rj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Lt1-Bg-AEu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PUV-gs-4Rj" secondAttribute="trailing" constant="10" id="bGV-6o-BIZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UAn-5M-uOJ" secondAttribute="bottom" constant="8" id="rxt-VH-cLA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UAn-5M-uOJ" secondAttribute="trailing" constant="8" id="srw-w6-saM"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -69,4 +82,7 @@
             <point key="canvasLocation" x="244" y="320"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info_btn" width="16" height="16"/>
+    </resources>
 </document>

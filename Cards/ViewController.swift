@@ -50,6 +50,12 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func infoButtonTapped(sender: AnyObject) {
+       let infoAlert = UIAlertController(title: "FYI", message: "This application uses a JSON to pull the latest general awareness cards. The data is scrapped from AffairsCloud. If you don't find the cards up to date with current affairs, please feel free to request for the JSON file, make changes and submit it back.\n\n\nFind code on github.com/sumitmukhija", preferredStyle: .Alert)
+        infoAlert.addAction(UIAlertAction(title: "Cool!", style: .Destructive, handler: nil))
+        presentViewController(infoAlert, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
