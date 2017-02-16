@@ -11,16 +11,23 @@ import Alamofire
 
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var txtViewCard: UITextView!
     @IBOutlet weak var cardContentView: PrimaryView!
     var origin: CGPoint?
     
     //data source
-    var dataArray: Array<String>?
+    var numberOfCards: Int? = 0
+    var dataArray: Array<String>?{
+        didSet(newValue){
+            self.numberOfCards = dataArray!.count
+            self.getRandomCard()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating()
         readJSON()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(ViewController.cardContentViewDragged(_:)))
         cardContentView.addGestureRecognizer(panGesture)
@@ -31,7 +38,9 @@ class ViewController: UIViewController {
         Alamofire.request(.GET, "https://dl.dropboxusercontent.com/u/39529196/test.json").responseJSON { response in
             if let JSON = response.result.value
             {
+                self.activityIndicator.stopAnimating()
                 self.dataArray = JSON as? Array<String>
+                self.getRandomCard()
             }
         }
     }
