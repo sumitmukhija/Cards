@@ -26,7 +26,22 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRa-Oy-pkB">
                                                 <rect key="frame" x="0.0" y="0.0" width="268" height="430"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tvh-P2-I6L">
+                                                        <rect key="frame" x="0.0" y="0.0" width="268" height="430"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                    </textView>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="Tvh-P2-I6L" firstAttribute="height" secondItem="NRa-Oy-pkB" secondAttribute="height" id="0aN-8s-buK"/>
+                                                    <constraint firstItem="Tvh-P2-I6L" firstAttribute="centerY" secondItem="NRa-Oy-pkB" secondAttribute="centerY" id="dBF-zO-BIm"/>
+                                                    <constraint firstItem="Tvh-P2-I6L" firstAttribute="centerX" secondItem="NRa-Oy-pkB" secondAttribute="centerX" id="mex-Wg-dXY"/>
+                                                    <constraint firstItem="Tvh-P2-I6L" firstAttribute="width" secondItem="NRa-Oy-pkB" secondAttribute="width" id="wN5-QK-XNH"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -75,11 +90,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="cardContentView" destination="PUV-gs-4Rj" id="8KG-mt-QGz"/>
+                        <outlet property="txtViewCard" destination="Tvh-P2-I6L" id="Zga-fS-BSE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244" y="320"/>
+            <point key="canvasLocation" x="397" y="278"/>
         </scene>
     </scenes>
     <resources>

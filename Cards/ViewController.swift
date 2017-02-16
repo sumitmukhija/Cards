@@ -7,16 +7,33 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var txtViewCard: UITextView!
     @IBOutlet weak var cardContentView: PrimaryView!
     var origin: CGPoint?
     
+    //data source
+    var dataArray: Array<String>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        readJSON()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(ViewController.cardContentViewDragged(_:)))
         cardContentView.addGestureRecognizer(panGesture)
+    }
+    
+    func readJSON()
+    {
+        Alamofire.request(.GET, "https://dl.dropboxusercontent.com/u/39529196/test.json").responseJSON { response in
+            if let JSON = response.result.value
+            {
+                self.dataArray = JSON as? Array<String>
+            }
+        }
     }
 
     func cardContentViewDragged(sender: UIPanGestureRecognizer){
