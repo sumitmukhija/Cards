@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -27,20 +28,20 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRa-Oy-pkB">
                                                 <rect key="frame" x="0.0" y="0.0" width="268" height="430"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tvh-P2-I6L">
-                                                        <rect key="frame" x="0.0" y="0.0" width="268" height="430"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tvh-P2-I6L">
+                                                        <rect key="frame" x="12" y="19.5" width="244" height="391"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="Tvh-P2-I6L" firstAttribute="height" secondItem="NRa-Oy-pkB" secondAttribute="height" id="0aN-8s-buK"/>
+                                                    <constraint firstItem="Tvh-P2-I6L" firstAttribute="height" secondItem="NRa-Oy-pkB" secondAttribute="height" multiplier="1:1.1" id="0aN-8s-buK"/>
                                                     <constraint firstItem="Tvh-P2-I6L" firstAttribute="centerY" secondItem="NRa-Oy-pkB" secondAttribute="centerY" id="dBF-zO-BIm"/>
                                                     <constraint firstItem="Tvh-P2-I6L" firstAttribute="centerX" secondItem="NRa-Oy-pkB" secondAttribute="centerX" id="mex-Wg-dXY"/>
-                                                    <constraint firstItem="Tvh-P2-I6L" firstAttribute="width" secondItem="NRa-Oy-pkB" secondAttribute="width" id="wN5-QK-XNH"/>
+                                                    <constraint firstItem="Tvh-P2-I6L" firstAttribute="width" secondItem="NRa-Oy-pkB" secondAttribute="width" multiplier="1:1.1" id="wN5-QK-XNH"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
