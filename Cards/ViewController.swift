@@ -10,11 +10,13 @@ import UIKit
 import Alamofire
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, TutorialViewHelper {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var txtViewCard: UITextView!
     @IBOutlet weak var cardContentView: PrimaryView!
     var origin: CGPoint?
+    var tView: TutorialView?
+    
     
     //data source
     var numberOfCards: Int? = 0
@@ -25,16 +27,33 @@ class ViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if userDefaults.boolForKey("isTutShown") != true && tView == nil
+        {
+            tView = NSBundle.mainBundle().loadNibNamed("TutorialView", owner: self, options: nil)[0] as! TutorialView
+            tView?.delegate = self
+            tView!.frame = self.view.frame
+            tView!.center = self.view.center
+            self.view.addSubview(tView!)
+            userDefaults.setBool(true, forKey: "isTutShown")
+        }
+        else{
+            getCardsFromServer()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicator.startAnimating()
-        readJSON()
+        activityIndicator.stopAnimating()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(ViewController.cardContentViewDragged(_:)))
         cardContentView.addGestureRecognizer(panGesture)
     }
     
-    func readJSON()
+    func getCardsFromServer()
     {
+        activityIndicator.startAnimating()
         Alamofire.request(.GET, "https://tinyurl.com/jcgxwkk").responseJSON { response in
             if let JSON = response.result.value
             {
@@ -87,6 +106,13 @@ class ViewController: UIViewController {
         let randomNum = Int(arc4random_uniform(UInt32(self.dataArray!.count)))
         let activeCard = self.dataArray![randomNum]
         txtViewCard.text = activeCard
+    }
+    
+    
+    //Delegate method for tutorial
+    func dismissTutorial() {
+        tView?.removeFromSuperview()
+        getCardsFromServer()
     }
     
     override func didReceiveMemoryWarning() {

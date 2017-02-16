@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95306A841E558D4500D331E9 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95306A831E558D4500D331E9 /* TutorialView.swift */; };
+		95306A861E558D5000D331E9 /* TutorialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95306A851E558D5000D331E9 /* TutorialView.xib */; };
 		9568A9311E5566FD005B31FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9568A9301E5566FD005B31FD /* AppDelegate.swift */; };
 		9568A9331E5566FD005B31FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9568A9321E5566FD005B31FD /* ViewController.swift */; };
 		9568A9361E5566FD005B31FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9568A9341E5566FD005B31FD /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		518FA2B8B505E9617E8E7FBC /* Pods-Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cards.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cards/Pods-Cards.release.xcconfig"; sourceTree = "<group>"; };
+		95306A831E558D4500D331E9 /* TutorialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		95306A851E558D5000D331E9 /* TutorialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialView.xib; sourceTree = "<group>"; };
 		9568A92D1E5566FD005B31FD /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9568A9301E5566FD005B31FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9568A9321E5566FD005B31FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				9568A9301E5566FD005B31FD /* AppDelegate.swift */,
 				9568A9321E5566FD005B31FD /* ViewController.swift */,
 				9568A9421E556A3E005B31FD /* PrimaryView.swift */,
+				95306A831E558D4500D331E9 /* TutorialView.swift */,
+				95306A851E558D5000D331E9 /* TutorialView.xib */,
 				9568A9341E5566FD005B31FD /* Main.storyboard */,
 				9568A9371E5566FD005B31FD /* Assets.xcassets */,
 				9568A9391E5566FD005B31FD /* LaunchScreen.storyboard */,
@@ -152,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95306A861E558D5000D331E9 /* TutorialView.xib in Resources */,
 				9568A93B1E5566FD005B31FD /* LaunchScreen.storyboard in Resources */,
 				9568A9381E5566FD005B31FD /* Assets.xcassets in Resources */,
 				9568A9361E5566FD005B31FD /* Main.storyboard in Resources */,
@@ -213,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95306A841E558D4500D331E9 /* TutorialView.swift in Sources */,
 				9568A9431E556A3E005B31FD /* PrimaryView.swift in Sources */,
 				9568A9331E5566FD005B31FD /* ViewController.swift in Sources */,
 				9568A9311E5566FD005B31FD /* AppDelegate.swift in Sources */,
