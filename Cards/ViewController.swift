@@ -82,6 +82,12 @@ class ViewController: UIViewController {
         presentViewController(infoAlert, animated: true, completion: nil)
     }
     
+    func getRandomCard(){
+        let randomNum = Int(arc4random_uniform(UInt32(self.dataArray!.count)))
+        let activeCard = self.dataArray![randomNum]
+        txtViewCard.text = activeCard
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
