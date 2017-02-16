@@ -19,16 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUV-gs-4Rj" userLabel="containerView" customClass="PrimaryView" customModule="Cards" customModuleProvider="target">
-                                <rect key="frame" x="26" y="40" width="268" height="400"/>
+                                <rect key="frame" x="26" y="25" width="268" height="430"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzc-he-dnt">
-                                        <rect key="frame" x="0.0" y="0.0" width="268" height="400"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="268" height="430"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRa-Oy-pkB">
-                                                <rect key="frame" x="0.0" y="0.0" width="268" height="400"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="430"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="NRa-Oy-pkB" secondAttribute="trailing" id="2nz-p4-hOd"/>
                                             <constraint firstItem="NRa-Oy-pkB" firstAttribute="height" secondItem="kzc-he-dnt" secondAttribute="height" id="7uS-hF-KMU"/>
@@ -47,11 +48,11 @@
                                     <constraint firstAttribute="trailing" secondItem="kzc-he-dnt" secondAttribute="trailing" id="9v2-Mq-Tdl"/>
                                     <constraint firstItem="kzc-he-dnt" firstAttribute="top" secondItem="PUV-gs-4Rj" secondAttribute="top" id="dW1-6q-8S4"/>
                                     <constraint firstItem="kzc-he-dnt" firstAttribute="leading" secondItem="PUV-gs-4Rj" secondAttribute="leading" id="gHg-x2-nXR"/>
-                                    <constraint firstAttribute="height" constant="400" id="olc-3x-JhO"/>
+                                    <constraint firstAttribute="height" constant="430" id="olc-3x-JhO"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.90588235294117647" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="PUV-gs-4Rj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2ej-zz-0Et"/>
                             <constraint firstItem="PUV-gs-4Rj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Lt1-Bg-AEu"/>
