@@ -63,6 +63,7 @@ class ViewController: UIViewController {
             break
         case .Ended:
             self.resetAttribs()
+            self.getRandomCard()
             break
         default:
             return
