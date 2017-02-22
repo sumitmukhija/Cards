@@ -16,8 +16,8 @@ class PrimaryView: UIView {
         self.layer.borderColor = UIColor.lightGrayColor().CGColor
         self.layer.shadowColor = UIColor.blackColor().CGColor
         self.layer.shadowOffset = CGSizeMake(0.3, 3.0);
-        self.layer.shadowOpacity = 0.3
-        self.layer.shadowRadius = 3.0
+        self.layer.shadowOpacity = 0.8
+        self.layer.shadowRadius = 6.0
     }
     
 }

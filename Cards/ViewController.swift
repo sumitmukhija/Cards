@@ -93,6 +93,7 @@ class ViewController: UIViewController, TutorialViewHelper {
         UIView.animateWithDuration(0.2) { 
             self.cardContentView.center = self.origin!
             self.cardContentView.transform = CGAffineTransformMakeRotation(0)
+            self.cardContentView.layer.shadowColor = self.getRandomColor().CGColor
         }
     }
     
@@ -120,6 +121,11 @@ class ViewController: UIViewController, TutorialViewHelper {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func getRandomColor() -> UIColor{
+        let red:CGFloat = CGFloat(drand48())
+        let green:CGFloat = CGFloat(drand48())
+        let blue:CGFloat = CGFloat(drand48())
+        return UIColor(red:red, green: green, blue: blue, alpha: 1.0)
+    }
 }
 
