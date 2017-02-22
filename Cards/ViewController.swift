@@ -53,15 +53,25 @@ class ViewController: UIViewController, TutorialViewHelper {
     
     func getCardsFromServer()
     {
-        activityIndicator.startAnimating()
+        showActivityIndicator()
         Alamofire.request(.GET, "https://tinyurl.com/jcgxwkk").responseJSON { response in
             if let JSON = response.result.value
             {
-                self.activityIndicator.stopAnimating()
+                self.hideActivityIndicator()
                 self.dataArray = JSON as? Array<String>
                 self.getRandomCard()
             }
         }
+    }
+    
+    func showActivityIndicator(){
+         activityIndicator.startAnimating()
+        self.cardContentView.userInteractionEnabled = false
+    }
+    
+    func hideActivityIndicator(){
+        self.activityIndicator.stopAnimating()
+        self.cardContentView.userInteractionEnabled = true
     }
 
     func cardContentViewDragged(sender: UIPanGestureRecognizer){
